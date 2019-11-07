@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#p1").toggle();
+    $("#p2").fadeToggle();
+    $("#p3").fadeToggle("slow");
+    $("#p4").fadeToggle(3000);
+  });
+});
+</script>
+</head>
+<body>
+
+<button>Toggle between hiding and showing the paragraphs</button>
+
+<p id="p1">Paragraph1</p>
+<p id="p2">Paragraph2</p>
+<p id="p3">Paragraph3</p>
+<p id="p4">Paragraph4</p>
+
+</body>
+</html>

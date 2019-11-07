@@ -1,0 +1,31 @@
+<html>
+<head>
+<script type= "text/javascript">
+function showMessage(){
+	document.getElementById("message").innerHTML="Welcome";
+}
+function display(){
+	/* document.getElementById("userName").value="this"; */
+	var name=document.getElementById("userName").value;
+	
+	}
+	/* alert(name); */
+ 	document.getElementById("message").innerHTML=name;
+}
+function clickMessage(){
+	document.getElementById("message").innerHTML="U clicked me";
+}
+
+</script>
+</head>
+
+<body onload="showMessage()">
+
+<span id="message" style ="color:red;"></span><br/>
+Name
+<input type="text" name="userName" id="userName"  onblur="display()"/>   <!-- value="Pre-existing" -->
+<br>
+<input type="button" value="Click me" onclick="clickMessage()"/>
+
+</body>
+</html>

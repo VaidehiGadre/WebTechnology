@@ -1,0 +1,22 @@
+<script type="text/javascript">
+function totalelements(){
+	var allgenders=document.getElementsByName("gender");
+	alert("Total genders:"+allgenders.length);
+}
+function check(){
+	var choice=document.getElementsByName("vehicle");
+	for(var i=0;i<choice.length;i++){
+		alert(choice[i].checked);
+	}
+	alert("Total checked:"+choice.length.checked);
+}
+</script>
+<form>
+Male:<input type="radio" name="gender" value="male">
+Female:<input type="radio" name="gender" value="female"><br>
+<input type="button" onclick="totalelements()" value="totalgenders"><br>
+<input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
+  <input type="checkbox" name="vehicle" value="Car"> I have a car<br>
+  <input type="checkbox" name="vehicle" value="Boat" checked> I have a boat<br><br>
+<input type="button" onclick="check()" value="totalchecked">
+</form>

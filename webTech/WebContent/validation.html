@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<Script>
+function validate()
+{
+	var fn=document.getElementById("FirstName").value;
+ 	var ln=document.getElementById("LastName").value;
+ 	
+ 	var x=document.getElementById("EID").value;  
+ 	var atposition=x.indexOf("@");  
+ 	var dotposition=x.lastIndexOf(".");  
+ 	
+ 	var PN=document.getElementById("PNO").value;
+ 	
+ 	
+ 	var coun=document.getElementById("country").value;
+ 	alert(coun);
+ 	
+  	//var flag=false;
+ 	if (fn==""||fn==null)
+	{
+		document.getElementById("errorSpan").innerHTML="First name is mandatory";
+	}
+	 else if(ln==""||ln==null)
+	{
+		 document.getElementById("errorSpan").innerHTML="Last name is mandatory";
+	} 
+	 else if(atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length)
+	 	{  
+		 document.getElementById("errorSpan").innerHTML="Please enter a valid e-mail address";  
+	 	  
+	 	} 
+	 else if(isNaN(PN)||PN==null||PN.length!=10)
+		 {
+		 document.getElementById("errorSpan").innerHTML="Enter Valid Phone Number";
+		 }
+ 	
+ 	
+ 	else{
+		 document.getElementById("errorSpan").innerHTML="";
+	 }
+ 	
+ 	function change()
+ 	{
+ 		var name=document.getElementById("country").this;
+ 		var retval=true;
+ 		if(country.value=="other")
+ 		{
+ 			document.getElementById("otherd").style.display="block";
+ 			retval=false;
+ 		}
+ 		else
+ 			{
+ 			document.getElementById("otherd").style.display="none";
+ 			}
+ 		return retval;
+ 	}
+ 	
+ 	
+}
+
+</Script>
+</head>
+<body>
+<form >
+<center>
+<label >First Name :</label>
+<input type="text" id="FirstName" ></br></br>
+
+ <label >Last Name :</label>
+<input type="text" id="LastName" ></br></br>
+
+<label >Email ID :</label>
+<input type="text" id="EID" ></br></br>
+
+<label >Phone Number :</label>
+<input type="text" id="PNO" ><br><br>
+
+
+<label >Country :</label>
+<select name="country" id="country" style="width: 160px" onchange="change()">
+					<option value="india">India</option>
+					<option value="singapore">singapore</option>
+					<option value="USA">USA</option>
+					<option value="china">china</option>
+					<option value="other">other</option></select><br><br>
+
+
+<!--
+<label >Gender :</label>
+<input type="radio" name="male" id="mgender" value="male">Male
+<input type="radio" name="female" id="fgender" value="female">Female<br><br>
+ -->
+
+<input type="text" id="otherd" style="display:none">
+<input type="button" onclick="validate()" value="Submit">
+
+
+</center>
+<span id="errorSpan" style="color: red"></span><br>
+</form>
+</body>
+</html>

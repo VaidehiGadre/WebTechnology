@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Forms</title>
+</head>
+<body>
+	<form action="login.jsp" method=post>
+		<table>
+			<tr>
+				<td><label for="Register_fname"> Enter first name: </label></td>
+				<td><input type="text" name="fname" value=""
+					id="Register_fname" style="width: 160px" /></td>
+			</tr>
+
+			<tr>
+				<td><label for="Register_lname"> Enter last name: </label></td>
+				<td><input type="text" name="lname" value=""
+					id="Register_lname" style="width: 160px" /></td>
+			</tr>
+
+			<tr>
+				<td><label for="Register_label"> Enter email: </label></td>
+				<td><input type="text" name="email" value=""
+					id="Register_label" style="width: 160px" /></td>
+			</tr>
+
+			<tr>
+				<td><label for="Register_password"> Enter pwd: </label></td>
+				<td><input type="password" name="password" value=""
+					id="Register_password" style="width: 160px" /></td>
+			</tr>
+
+
+			<tr>
+				<td><label for="Register_country">Select countries:</label></td>
+				<td><select name="country" id="Register_country" style="width: 160px">
+					<option value="india">India</option>
+					<option value="singapore">singapore</option>
+					<option value="USA">USA</option>
+					<option value="china">china</option>
+					<option value="other">other</option></select></td>
+			</tr>
+
+			<tr>
+				<td colspan="2"><label for="Register_gendermale">Enter gender:</label>
+				<input type="radio" name="male" id="Register_gendermale" value="male">
+					Male
+				<label for="Register_genderfemale"></label>
+				<input type="radio" name="female" id="Register_genderfemale" value="female">
+					Female
+				<label for="Register_genderother"></label>
+				<input type="radio" name="other" id="Register_genderother" value="other">
+					Other
+				</td>
+			</tr>
+			
+			<tr>
+			<td colspan="2"><div align="left"><input type="submit" id="register_0" value="register"/></div></td>
+			</tr>
+			
+		</table>
+
+	</form>
+</body>
+</html>

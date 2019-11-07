@@ -1,0 +1,29 @@
+<html>
+<body>
+<script type="text/javascript">
+
+function empty()
+{
+	var a=document.getElementById("nm").value;
+	if (a=="")
+	{
+		alert("Invalid user");
+	}
+	else
+		{
+			var flag=confirm("You have entered the name as "+a+"Press Ok to continue");
+			if(flag)
+				{
+					document.write("You have confirmed to continue");
+				}
+			else
+				{
+				document.write("Canno proceed further ... you have cancelled the process");
+				}
+		}
+}
+</script>
+<input type="text" id="nm" ></br>
+<input type="button" onclick="empty()" value="Submit">
+</body>
+</html>
